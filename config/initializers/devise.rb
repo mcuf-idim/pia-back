@@ -11,15 +11,15 @@
 Devise.setup do |config|
   # ==> LDAP Configuration
   config.ldap_logger = ENV['DEVISE_LDAP_LOGGER']
-  config.ldap_create_user = true
-  config.ldap_update_password = true
+  config.ldap_create_user = false
+  config.ldap_update_password = false
   config.ldap_config = "#{Rails.root}/config/ldap.yml"
   config.ldap_check_group_membership = false
   config.ldap_check_group_membership_without_admin = false
   config.ldap_check_attributes = false
   config.ldap_check_attributes_presence = false
   config.ldap_use_admin_to_bind = ENV['DEVISE_LDAP_LOGGER_ADMIN_BIND']
-  config.ldap_ad_group_check = false
+  # config.ldap_ad_group_check = false
 
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
